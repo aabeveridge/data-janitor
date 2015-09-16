@@ -45,7 +45,6 @@ wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE)
 dev.off()
 rm(wiki.corpus)
 
-
 wiki.docs <- removePunctuation(wiki.docs, preserve_intra_word_dashes=TRUE)
 wiki.docs <- removeNumbers(wiki.docs)
 wiki.corpus <- Corpus(VectorSource(wiki.docs))

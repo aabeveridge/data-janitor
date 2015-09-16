@@ -1,0 +1,6 @@
+#!/bin/bash
+pandoc article.md \
+--output index.html \
+--css style.css \
+--template main.html \
+--smart

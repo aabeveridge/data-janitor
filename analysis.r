@@ -16,6 +16,7 @@ library(RColorBrewer)
 
 library(ggplot2)
 library(gridExtra)
+library(Rgraphviz)
 
 # Sets the working directory for the project
 setwd("~/data-janitor")
@@ -181,9 +182,9 @@ rm(wiki.corpus)
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 dtm <- DocumentTermMatrix(wiki.corpus)
 png("./images/cluster1.png", 750, 550)
-    plot(dtm, terms=findFreqTerms(dtm, lowfreq=31, highfreq=1000), corThreshold=0.25, 
-       attrs=list(node=list(shape = "ellipse", fixedsize = TRUE, fillcolor="lightblue", 
-       height="1.5", width="6", fontsize="14.5")))
+    plot(dtm, "dot", terms=findFreqTerms(dtm, lowfreq=31, highfreq=1000), corThreshold=0.25,
+         attrs=list(node=list(shape = "ellipse", fillcolor="lightblue", height="1.5", 
+         width="6", fontsize="14.5")))
 dev.off()
 rm(wiki.corpus)
 #wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, colors=brewer.pal(12, "Paired"), random.color=FALSE)

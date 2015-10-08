@@ -1,4 +1,4 @@
-###**Data Literacy, Statistical Reasoning, and Information Design**
+###**Data Literacy, Statistical Rhetoric, and Information Design**
 by Aaron Beveridge
 
 ##Introduction

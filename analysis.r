@@ -1,6 +1,6 @@
-#############################
+##################################
 # Wordcloud/Tagcloud Example
-#############################
+##################################
 
 # Text mining package for R
 library(tm)
@@ -16,7 +16,7 @@ library(RColorBrewer)
 
 library(ggplot2)
 library(gridExtra)
-library(Rgraphviz)
+library(igraph)
 
 # Sets the working directory for the project
 setwd("~/data-janitor")
@@ -32,10 +32,9 @@ for (i in 1:length(docs.list)){
     wiki.docs <- append(wiki.docs, as.character(d$extract))
 }
 
-
-##########################################
+#######################################
 ## Word Frequency Bar Graph 1
-##########################################
+#######################################
 
 # This graph is completed prior to scrubbing the text data
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
@@ -179,6 +178,7 @@ rm(wiki.corpus)
 ##################################
 # Cluster Graph
 ##################################
+
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 dtm <- DocumentTermMatrix(wiki.corpus)
 png("./images/cluster1.png", 750, 550)
@@ -188,3 +188,20 @@ png("./images/cluster1.png", 750, 550)
 dev.off()
 rm(wiki.corpus)
 #wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, colors=brewer.pal(12, "Paired"), random.color=FALSE)
+
+##################################
+# Network Graph
+##################################
+
+wiki.corpus <- Corpus(VectorSource(wiki.docs))
+tdm <- TermDocumentMatrix(wiki.corpus)
+tdm <- as.matrix(tdm)
+tdm[tdm>=1] <- 1
+termMatrix <- tdm %*% t(tdm)
+g <- graph.adjacency(termMatrix, weighted=T, mode = "undirected")
+g <- simplify(g)
+V(g)$label <- V(g)$name
+V(g)$degree <- degree(g)
+set.seed(3952)
+layout1 <- layout.fruchterman.reingold(g)
+plot(g, layout=layout1)

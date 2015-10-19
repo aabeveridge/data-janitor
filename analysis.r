@@ -195,10 +195,11 @@ rm(wiki.corpus)
 
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 tdm <- TermDocumentMatrix(wiki.corpus)
+tdm <- removeSparseTerms(tdm, .2)
 tdm <- as.matrix(tdm)
 tdm[tdm>=1] <- 1
 termMatrix <- tdm %*% t(tdm)
-g <- graph.adjacency(termMatrix, weighted=T, mode = "undirected")
+g <- graph.adjacency(tdm, weighted=T, mode = "undirected")
 g <- simplify(g)
 V(g)$label <- V(g)$name
 V(g)$degree <- degree(g)

@@ -1,7 +1,5 @@
 ###**Data Literacy, Statistical Rhetoric, and Information Design**
 
-<iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1wrBuAa2BpczD0Fw_2Z2uG3fa5cAbEj79mEmmJ2ETJ5M&font=Default&lang=en&timenav_position=top&hash_bookmark=true&initial_zoom=6&height=800' width='600' height='800' frameborder='0'></iframe>
-
 by Aaron Beveridge
 
 ##Introduction

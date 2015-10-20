@@ -92,7 +92,6 @@ rm(wiki.corpus)
 
 wiki.docs <- removePunctuation(wiki.docs, preserve_intra_word_dashes=TRUE)
 wiki.docs <- removeNumbers(wiki.docs)
-wiki.corpus <- Corpus(VectorSource(wiki.docs))
 wiki.docs <- tolower(wiki.docs)
 wiki.docs <- removeWords(wiki.docs, stopwords(kind="SMART"))
 wiki.docs <- stripWhitespace(wiki.docs)
@@ -119,7 +118,7 @@ rm(wiki.corpus)
 
 # Changing colors
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
-png(file="wc6.png", width=650, height=650)
+png(file="~/Desktop/wc6.png", width=650, height=400)
 wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(8, "Dark2"), random.color=FALSE)
 dev.off()
 rm(wiki.corpus)

@@ -86,7 +86,7 @@ rm(wiki.corpus)
 # and an unscrubbed corpus 
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="wc2.png", width=650, height=650)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE)
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, rot.per=0)
 dev.off()
 rm(wiki.corpus)
 
@@ -99,14 +99,14 @@ wiki.docs <- stripWhitespace(wiki.docs)
 
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="wc3.png", width=650, height=650)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE)
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, rot.per=0)
 dev.off()
 rm(wiki.corpus)
 
 # Adding random word order to help with comparison
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="wc4.png", width=650, height=650)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE)
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, rot.per=0)
 dev.off()
 rm(wiki.corpus)
 

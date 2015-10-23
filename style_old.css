@@ -12,7 +12,7 @@ body {
   margin: 0;
   margin-top: 70px;
   padding: 0;
-  background: #fefefe;
+  background: #fefefe
 }
 
 p {
@@ -21,10 +21,6 @@ p {
   margin-left: auto;
   margin-right: auto;
 }  
-
-img {
-  max-width: 100%;
-}
 
 h1, h2, h3, h4, h5, h6 {
   color: #111;
@@ -44,6 +40,7 @@ h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
+  margin-top: 30;
 }
 
 h2 {
@@ -76,10 +73,13 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  border-top: 1px solid #aaa;
+  border-top: 6px solid #aaa;
   border-bottom: 1px solid #eee;
   margin: 1em 0;
   padding: 0;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 pre, code, kbd, samp {
@@ -92,6 +92,9 @@ pre, code, kbd, samp {
   white-space: -pre-wrap; /* Opera 4-6 */
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 b, strong {
@@ -135,8 +138,19 @@ ul, ol {
   padding: 0 0 0 2em;
 }
 
+li {
+  list-style: square;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 li p:last-child {
   margin-bottom: 0;
+  list-style: square;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul ul, ol ol {
@@ -161,20 +175,24 @@ dd:last-child {
 }
 
 img {
-  border: 0;
+  border: none;
   -ms-interpolation-mode: bicubic;
   vertical-align: bottom;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 5px #888888;
+  margin-bottom: 25px;
 }
 
-figure {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-figure img {
+.figure img {
   border: none;
-  margin: 0 auto;
+  display: block;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 5px #888888;
+  margin-bottom: 25px;
 }
 
 figcaption {
@@ -226,6 +244,7 @@ div#TOC {
 .welltoc li {
   list-style: square;
   color: #444;  
+  width: 170px;
 }
 
 a {

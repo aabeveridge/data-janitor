@@ -21,6 +21,8 @@ When a wordcloud tool like Wordle.net is used, many of the data janitorial steps
 
 ##Methodology
 XXXThis section needs a better framework---why is it important? why is it included?XXX
+XXXOne possible approach is to talk about the first paragraph where access to data and methodologies needs improved. This section's discussion can help reveal what is meant by thatXXX
+XXXTalk more about the MassMine grant, talk more about the NEH's digging into data challenge, and other examples where access and methods are intertwinedXXX
 
 <a href="https://s3.amazonaws.com/easel.ly/all_easels/832990/wordcloud1/thumb.jpg"></a><img src="https://s3.amazonaws.com/easel.ly/all_easels/832990/wordcloud1/image.jpg" alt="wordcloud1" title="easel.ly" /></a>
 

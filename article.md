@@ -1,4 +1,4 @@
-###**Sweeping it Under the Rug: Data Janitorial Work, Statistical Reasoning, and Information Rhetorics**
+###**Looking in the Dustbin: Data Janitorial Work, Statistical Reasoning, and Information Rhetorics**
 
 by Aaron Beveridge
 
@@ -109,7 +109,6 @@ XXXNeed conclusion for this section--restating and summarizing arguments made th
 
 <!--Jeanne Fahnestock has tried to put pressure on the idea that science and rhetoric are mutually exclusive territories; “the terms on both sides of the preposition in the phrase 'rhetoric of science' come out somewhat changed. A rhetoric of science puts pressure on both science and rhetoric” (278). Fahnestock's impressive work, such as her Rhetorical Figures in Science, understands the rhetoric of science as using sylistics, figures, tropes, and schemes to read and rewrite the persuasive elements of scientific inquiry/writing. Although she has called for a more integrated convergence of rhetoric and science, so far this convergence has been relatively limited to the “formal possibilities, identified ultimately in both rhetoric and neurolinguistics, and [how] the historical particulars together constitute the ‘available means of persuasion'” (175). -->
 
-[^1]: Whereas "analysis" often refers to *human* reading, observation, or investigation of underlying evidence, sources, or data, "analytics" are often systematized statistical analyses of datasets too large for traditional analyses, where methodologies may be re-applied in the future on other similar data types to produce a visual analysis. For example, Wordle.net may be understood as an "analytic" because it replicates textual analyses of various textual data and produces wordcloud visuals. 
 
 [^2]: The text mining and natural language processing for the visualizations in this article are completed with the *TM* package in R. 
 

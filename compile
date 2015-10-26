@@ -1,6 +1,62 @@
 #!/bin/bash
-pandoc article.md \
---output index.html \
+
+#######################################################
+## This page is built with Pandoc using markdown. Site 
+## navigation is created with Pandoc's 
+## include-before-body function by inserting nav.html
+## into every page's HTML when it is built by Pandoc.
+####################################################### 
+
+#Intro
+pandoc ./markdown/intro.md \
 --css style.css \
---template main.html \
---smart
+--template ./templates/main.html \
+--output index.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Intro"
+
+#Methods
+pandoc ./markdown/methods.md \
+--css style.css \
+--template ./templates/main.html \
+--output methods.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Methods"
+
+#Data Janitorial Work
+pandoc ./markdown/janitor.md \
+--css style.css \
+--template ./templates/main.html \
+--output janitor.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Data Janitorial Work"
+
+#Statistical Reasoning
+pandoc ./markdown/stats.md \
+--css style.css \
+--template ./templates/main.html \
+--output stats.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Statistical Reasoning" 
+
+#Conclusion
+pandoc ./markdown/conclusion.md \
+--css style.css \
+--template ./templates/main.html \
+--output conclusion.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Conclusion" 
+
+#Notes and References
+pandoc ./markdown/notes.md \
+--css style.css \
+--template ./templates/main.html \
+--output notes.html \
+--smart \
+--include-before-body ./templates/nav.html \
+--title-prefix="Notes & References" 

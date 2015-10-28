@@ -119,7 +119,7 @@ rm(wiki.corpus)
 # Changing colors
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="~/Desktop/wc6.png", width=650, height=400)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(8, "Dark2"), random.color=FALSE)
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(8, "Dark2", colorblindFriendly=TRUE), random.color=FALSE)
 dev.off()
 rm(wiki.corpus)
 

@@ -1,21 +1,62 @@
-##Statistical Reasoning
-After the data janitorial work is complete, allowing a more acurate calculation of word frequencies, the next areas to explore with the wordcloud visualizations are word layout and color assignment. Certainly, there are no right answers to the question of which layout or color method is more appropriate---which is why data visualizations are as rhetorical as they are quantitative. The more ambiguous a visualization, the more it tends toward the rhetorical end of the spectrum, and the more precise the more it tends toward the quantitative. It would be a mistake, however, to suggest that more precise visualizations are not at all rhetorical. Darrell Huff and Irving Geis in *How to Lie with Statistics*, respond to this problem: 
+##Statistical Reasoning and Information Rhetorics
+This section will consider word layout and color assignment for wordcloud visualizations. While these two aspects of a wordcloud appear to be designed mostly based on appealing visual stylistics, this section will explain how these components may also fit within an inventive framework for information rhetorics and statistical reasoning. As the introduction argues, it is tempting to understand data visualization and information rhetorics based on traditional differences between rhetoric and statistics---where statistics provides the "content" analysis and quantitative "substance," and where rhetoric is merely employed near the end of the process to make the visuals appealing, artistic, or persuasive. In order to move past the simplistic fact/deception binary of information rhetorics, we need more complex investigations that show data visualization to be *both* rhetorical *and* statistical all the way down. From the choice of which data to collect or access, to the technologies and methodologies selected for processing and scrubbing the data, and finally, to the analyses and visualizations used to investigate or summarize the data---when *choice* is involved at any point in the process, rhetorical frameworks (whether explicitly acknowledged by statisticians or not) are an integral part of making data meaningful.
 
-> This suggests giving statistical material [...] a very sharp second look before accepting 
-> any of them. Sometimes a careful squint will sharpen the focus. But arbitrarily rejecting 
-> statistical methods makes no sense either. That is like refusing to read because writers 
-> sometimes use words to hide facts and relationships rather than to reveal them (121). 
-
-In moving beyond the fact/decption binary for information rhetorics, the more difficult issue raised by the relationship of rhetoric to statistical reasoning is which choices---among a variety of reasonable non-deceptive choices for data visulizations---best represent the underlying data? As more and more types of data visualizations are made available, answers to questions like this will venture further away from purely quantitative answers. 
-
-In the Data Janitorial Work section, the words in the wordclouds were laid out according to their frequencies. The words with the highest frequency were placed in the center, and then the words were arranged in circular fashion outward from center as their frequency lessoned. While this ordering makes sense logically, it actually makes it more difficult to see details in the data and contrast among ranges of frequency. While it may be counterintuitive, a random word layout provides an alternative perspective that improves upon these issues. The two images below show the difference between a frequency-based layout and random word layout. The first image displays the the center-out frequency layout, and the second image displays the words at random with 10% of the words turned 90 degrees at random as well. 
+###Word Layout
+In the [Data Janitor](http://aaronbeveridge.com/data-janitor/janitor.html) section, the words in the wordclouds were laid out according to their frequencies. The words with the highest frequency were placed in the center, and then the words were arranged in circular fashion outward from center as their frequency reduces. While this layout makes sense, it arguably makes it more difficult to see details and contrast among ranges of word frequency. While it may be counterintuitive, a random word layout provides an alternative perspective that improves upon these issues. The two images below show the difference between a frequency-based layout and random word layout. The first image displays the the center-out frequency layout, and the second image displays the words at random with 10% of the words turned 90 degrees. 
 
 ![](./images/wc3.png)
 ![](./images/wc4.png)
 
-By changing the logic of how the words are laid out in the wordcloud, it becomes easier to visually analyze and compare frequencies. The layout is randomized, but the size of the word font remains categorized according to frequency. This allows the visualization to display more contrast among the words without making the visual altogether useless. Also, by turning a portion of the words 90 degrees, this also allows for greater contrast and variation in the visual. There is not space in this article to discuss the importance of [randomization](https://en.wikipedia.org/wiki/Randomization) for statistical reasoning and data analysis, but it is important to note that the change from a frequency ordered layout to a random one seems counterintuitive until it is tested. The question to ask, then, is which layout is more appropriate to the dataset and project goals? With a visualization as ambiguous as a wordcloud, there is no right answer to this question. However, when the two are compared the difference in proportionality may help with deciding which option is more suitable. If the point of the wordcloud was to *only* display the *variation* in word frequencies, then the random layout may create the perception of more frequency variation than what actually occurs in the corpus. Such a question may stretch the limits of what a wordcloud visual is intended to portray, and this is precisely the point. It forces the question of whether the wordcloud is the right visual for the type of analysis being conducted. 
+By changing the logic of how the words are laid out in the wordcloud, it becomes easier to visually analyze and compare word frequencies. The layout is randomized, but the size of the word font remains categorized according to frequency. This allows the visualization to display more contrast among the words without making the visual altogether useless. Also, by turning a portion of the words 90 degrees, this creates greater contrast and variation in the visual. There is not space in this article to discuss the importance of [randomization](https://en.wikipedia.org/wiki/Randomization) for statistical reasoning and data analysis, but it is important to note that the change from a frequency ordered layout to a random one seems counterintuitive until it is tested and compared. 
 
-While word color selection could also be assigned at random, too much randomization would render the visualization meaningless. Therefore, colors can be assigned to levels of frequency in the same way that font size is determined. The visualization below retains the random layout, and colors are assigned from red to blue---with dark red assigned to the most frequent word, light red assigned to less frequeny words, and blue assigned to the least frequent words. The logic of this color designation follows the standard "red is hot" and "blue is cold" color use. However, as the image below displays, the common color hot/cold color assignment may not be the best choice for a wordcloud. 
+![](./images/cloud1.jpg)
+
+Finally, it is important to note that even when wordclouds layouts are more artistic or focused on visual stylistics, statistical properties remain. Even though the shape of the wordcloud above was designed to look like a puffy cloud, font size remains categorized according to word frequency and data scrubbing was still needed to emphasize the semantically relevant words in the text.[^1] 
+
+###Color Assignment
+The colors for the images below are assigned to words systematically using the [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf) package in R. This package is based on the work of [Cynthia Brewer](http://www.geog.psu.edu/people/brewer-cynthia)---a geography professor at Penn State Univerisity whose work focuses on cartographic design. While mapping and cartography may not seem relevant to word cloud visuals, the visual problems invoving color assignments in mapping and topographic representation are relevant to many types of complex visualizations where "understanding how to manipulate the three perceptual dimensions of colour (hue, saturation and lightness) is required to create attractive and logical colour sequences" (27). 
+
+[ColorBrewer](http://colorbrewer.org) has 35 color scheme "sets" divided into three groups: qualitative, sequential, and diverging. In their publication that explains and justifies the rationale and development of the ColorBrewer tool, Cynthia Brewer and Mark Harrower describe the three groups of color schemes as follows:
+
+**Qualitative**
+
+> Qualitative colour schemes rely primarily on differences in hue to create a colour scheme 
+> that does not imply order, merely difference in kind. Since there is no conceptual 
+> ranking in nominal data it is inappropriate to imply order when depicting these data with 
+> colour (for example, by using a light-to-dark single-hue sequence). Qualitative schemes 
+> work best when hue is varied and saturation and lightness are kept or nearly constant. We 
+> do not recommend arbitrarily using strong ‘neon’ colours (i.e. high saturation) and 
+> pastel colours (i.e. light and low saturation) in the same qualitative colour scheme 
+> because these variations in saturation might imply order.
+
+**Sequential**
+
+> Sequential colour schemes imply order and are suited to representing data that ranges 
+> from low-to-high values either on an ordinal scale (e.g. cold, warm, hot) or on a 
+> numerical scale (e.g. age classes of 0–9, 10–19, 20–29, etc.). Lightness steps dominate 
+> the look of these schemes, usually with light colours for low data values and dark 
+> colours for high values. ‘Dark equals more’ is a standard cartographic convention. 
+> Sequential schemes can be either single hue (e.g. same blue, with different lightness and 
+> saturation levels) or multi-hued (e.g. light yellow through dark green). ColorBrewer 
+> includes 12 multi-hued sequential schemes and 6 single-hued schemes.
+
+**Diverging**
+
+> Diverging colour schemes should be used when a critical data class or break point needs 
+> to be emphasized. The break or class in the middle of the sequence is emphasized by a hue 
+> and lightness change and should represent a critical value in the data such as the mean, 
+> median or zero. For example, a choropleth map of poverty rates might be designed to 
+> emphasize the national rate (midway through the range of rates shown on the map) so that 
+> places above and below the national rate are shown with different hues and thus have 
+> similar visual emphasis. Diverging schemes are always multi-hue sequences and, because of 
+> the way in which lightness is varied, do not make good black and white photocopies or 
+> prints (which only capture differences in lightness).
+
+While the diverging color scheme clearly is not relevant to wordclouds--since it emphasizes the "break" or "middle" range of the data. The wordclouds below consider and compare the qualitative and sequential color schemes. 
+
+##END OF DRAFT##
+
+While word color selection could also be assigned at random, but too much randomization would begin to make the visualization meaningless. Therefore, colors can be assigned to levels of frequency in the same way that font size is determined. The visualization below retains the random layout, and colors are assigned from red to blue---with dark red assigned to the most frequent word, light red assigned to less frequeny words, and blue assigned to the least frequent words. The logic of this color designation follows the standard "red is hot" and "blue is cold" color use. However, as the image below displays, the common color hot/cold color assignment may not be the best choice for a wordcloud. 
 
 ![](./images/wc5.png)
 
@@ -32,3 +73,5 @@ Finally, as mentioned earlier in this section, the question of whether a wordclo
 ![](./images/cluster1.png)
 
 
+
+[^1]: The "puffy cloud" visual was created with [Tagul](https://tagul.com/) using the words from a draft of this section as the text data.

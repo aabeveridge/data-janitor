@@ -15,6 +15,6 @@ To produce a word cloud, there are many steps that occur between the raw unstruc
 
 <a href="http://aaronbeveridge.com/data-janitor/methods.html"><button>Next: Methodology</button></a>
 
-[^1]: Thank you to [Laurie E. Gries](http://legries.com) and [Nicholas Van Horn](http://nicholasvanhorn.com) for their assistance in reviewing this webtext. 
+[^1]: Thank you to [Laurie E. Gries](http://legries.com) and [Nicholas Van Horn](http://nicholasvanhorn.com) for their feedback and assistance in reviewing this webtext. 
 [^2]: Whereas "analysis" often refers to *human* reading, observation, or investigation of underlying evidence, sources, or data, "analytics" are often systematized statistical analyses of datasets too large for traditional analyses. Furthermore, the term "analytics" also implies that the methodologies may be systematically re-applied in the future on other similar data types to produce a similar visual analysis. For example, Wordle.net may be understood as an "analytic" because it reproduces a word cloud visual analysis of various textual data. 
-[^3]: Collin Gifford Brooke and Laurie E. Gries argue a similar point about the structured Pechu Kucha model for slideware presentations in "An Inconvenient Tool: Rethinking the Role of Slideware in the Writing Classroom."
+[^3]: Laurie E. Gries and Collin Gifford Brooke argue a similar point about the structured Pechu Kucha model for slideware presentations in "An Inconvenient Tool: Rethinking the Role of Slideware in the Writing Classroom."

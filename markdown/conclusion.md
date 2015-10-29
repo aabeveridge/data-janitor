@@ -1,4 +1,6 @@
 ##Conclusion
+Use the new enculturation article as an example of using wordclouds to complete analyses of rhetoric and composition. 
+
 Certainly, there are no right answers to the question of which layout or color method is more appropriate---which is why data visualizations are as rhetorical as they are quantitative. The more ambiguous a visualization, the more it tends toward the rhetorical end of the spectrum, and the more precise the more it tends toward the quantitative. It would be a mistake, however, to suggest that more precise visualizations are not at all rhetorical. Darrell Huff and Irving Geis in *How to Lie with Statistics*, respond to this problem: 
 
 > This suggests giving statistical material [...] a very sharp second look before accepting 

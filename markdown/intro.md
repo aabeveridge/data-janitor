@@ -1,4 +1,4 @@
-###**Looking in the Dustbin: Data Janitorial Work, Statistical Reasoning, and Information Rhetorics**
+#**Looking in the Dustbin: Data Janitorial Work, Statistical Reasoning, and Information Rhetorics**
 
 by Aaron Beveridge
 

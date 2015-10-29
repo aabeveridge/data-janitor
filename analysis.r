@@ -1,22 +1,19 @@
-##################################
-# Wordcloud/Tagcloud Example
-##################################
+##############################################
+# R code for Word Cloud and Bar Graph Visuals
+##############################################
 
-# Text mining package for R
+# Text mining package
 library(tm)
-
-# Tagcloud/wordcloud package for R
+# Tagcloud/wordcloud package
 library(wordcloud)
-
-# Stemming package for R
+# Stemming package
 library(SnowballC)
-
-# Color palate package for R
+# Color palate package
 library(RColorBrewer)
-
+# ggplot2 Visualization package
 library(ggplot2)
+# Table visualization package
 library(gridExtra)
-library(igraph)
 
 # Sets the working directory for the project
 setwd("~/data-janitor")
@@ -32,10 +29,6 @@ for (i in 1:length(docs.list)){
     wiki.docs <- append(wiki.docs, as.character(d$extract))
 }
 
-#######################################
-## Word Frequency Bar Graph 1
-#######################################
-
 # This graph is completed prior to scrubbing the text data
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 dtm <- DocumentTermMatrix(wiki.corpus)
@@ -49,32 +42,6 @@ word.names <- head(freq.data$X, 10)
 word.names <- rev(word.names)
 word.freq <- head(freq.data$Total, 10)
 word.freq <- rev(word.freq)
-## Open PNG device and set location to save file
-png("freq_plot1.png", 600, 480)
-
-	## Set plot dimensions 
-	par(pin=c(4, 4))
-	
-	## Draw plot
-	freq.plot <- barplot(word.freq, names.arg=word.names, horiz=TRUE, 
-						 main="Word Frequencies", ylab=NULL, xlab="Frequency", 
-						 las=2, axes=FALSE)
-	
-	# Starting x-axis position for adding frequency totals to bars
-	freq.pos <- 0.65		
-	
-	## Add frequency totals to bars	
-	for(i in 1:length(word.freq)) {			
-	text(freq.pos, labels=word.freq[i], pos=4, offset=.2)
-	freq.pos <- freq.pos + 1.2
-	}
-
-	## Add bottom axis and numeric range
-	axis(1, at=seq(0, 1200, 100))
-
-## Close PDF device
-dev.off()
-rm(wiki.corpus)
 
 #wiki.corpus <- Corpus(VectorSource(wiki.docs))
 #png(file="wc1.png", width=650, height=650)
@@ -109,24 +76,72 @@ wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, rot.per=
 dev.off()
 rm(wiki.corpus)
 
-# Adding colors
+# Qualitative colors 1
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="wc5.png", width=650, height=650)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(12, "Paired"), random.color=FALSE)
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(8, "Paired"), random.color=FALSE)
 dev.off()
 rm(wiki.corpus)
 
-# Changing colors
+# Qualitative colors 2
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
 png(file="~/Desktop/wc6.png", width=650, height=400)
 wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(8, "Dark2", colorblindFriendly=TRUE), random.color=FALSE)
 dev.off()
 rm(wiki.corpus)
 
-# Changing colors removing randomization
+# Sequential colors 1
 wiki.corpus <- Corpus(VectorSource(wiki.docs))
-png(file="wc7.png", width=650, height=650)
-wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, colors=brewer.pal(8, "Dark2"), random.color=FALSE)
+png(file="~/Desktop/wc7.png", width=650, height=650)
+par(bg="black")
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(9, "YlOrRd"), random.color=FALSE)
+dev.off()
+rm(wiki.corpus)
+
+# Sequential colors 2
+wiki.corpus <- Corpus(VectorSource(wiki.docs))
+png(file="~/Desktop/wc8.png", width=650, height=650)
+par(bg="black")
+wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=TRUE, colors=brewer.pal(9, "PuBuGn"), random.color=FALSE)
+dev.off()
+rm(wiki.corpus)
+
+
+## Changing colors removing randomization
+#wiki.corpus <- Corpus(VectorSource(wiki.docs))
+#png(file="wc7.png", width=650, height=650)
+#wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, colors=brewer.pal(8, "Dark2"), random.color=FALSE)
+#dev.off()
+#rm(wiki.corpus)
+
+##########################################
+## Word Frequency Bar Graph 1
+##########################################
+
+## Open PNG device and set location to save file
+png("freq_plot1.png", 600, 480)
+
+	## Set plot dimensions 
+	par(pin=c(4, 4))
+	
+	## Draw plot
+	freq.plot <- barplot(word.freq, names.arg=word.names, horiz=TRUE, 
+						 main="Word Frequencies", ylab=NULL, xlab="Frequency", 
+						 las=2, axes=FALSE)
+	
+	# Starting x-axis position for adding frequency totals to bars
+	freq.pos <- 0.65		
+	
+	## Add frequency totals to bars	
+	for(i in 1:length(word.freq)) {			
+	text(freq.pos, labels=word.freq[i], pos=4, offset=.2)
+	freq.pos <- freq.pos + 1.2
+	}
+
+	## Add bottom axis and numeric range
+	axis(1, at=seq(0, 1200, 100))
+
+## Close PDF device
 dev.off()
 rm(wiki.corpus)
 
@@ -174,34 +189,3 @@ png("freq_plot2.png", 600, 480)
 dev.off()
 rm(wiki.corpus)
 
-##################################
-# Cluster Graph
-##################################
-
-wiki.corpus <- Corpus(VectorSource(wiki.docs))
-dtm <- DocumentTermMatrix(wiki.corpus)
-png("./images/cluster1.png", 750, 550)
-    plot(dtm, "dot", terms=findFreqTerms(dtm, lowfreq=31, highfreq=1000), corThreshold=0.25,
-         attrs=list(node=list(shape = "ellipse", fillcolor="lightblue", height="1.5", 
-         width="6", fontsize="14.5")))
-dev.off()
-rm(wiki.corpus)
-#wordcloud(wiki.corpus, max.words=200, scale=c(6, 1), random.order=FALSE, colors=brewer.pal(12, "Paired"), random.color=FALSE)
-
-##################################
-# Network Graph
-##################################
-
-wiki.corpus <- Corpus(VectorSource(wiki.docs))
-tdm <- TermDocumentMatrix(wiki.corpus)
-tdm <- removeSparseTerms(tdm, .2)
-tdm <- as.matrix(tdm)
-tdm[tdm>=1] <- 1
-termMatrix <- tdm %*% t(tdm)
-g <- graph.adjacency(tdm, weighted=T, mode = "undirected")
-g <- simplify(g)
-V(g)$label <- V(g)$name
-V(g)$degree <- degree(g)
-set.seed(3952)
-layout1 <- layout.fruchterman.reingold(g)
-plot(g, layout=layout1)

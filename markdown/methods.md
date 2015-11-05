@@ -31,7 +31,7 @@ After collecting text data from Wikipedia, the data scrubbing and analysis is co
 
 All of the of the raw text data and the R code that produced the visualizations for this article are [available here](https://github.com/aabeveridge/data-janitor) on GitHub. GitHub is a free social coding site that provides support for open development and collaborative programming. Hopefully, by providing access to all of the code and text data that produced the visualizations below, it will allow other scholars and teachers to modify or build upon these examples and produce their own text analyses or word cloud visuals. Data literacy can be intimidating for rhetoric and writing scholars who have limited training in statistics and data visualization, but encouraging open and collaborative development will allow new projects to draw from and build on previous ones. As Mary K. Stewart argues, writing studies must continue to develop "a definition of digital literacy as a *learning outcome* that has three characteristics: multimodal composition, information, and collaboration." As GitHub is quickly becoming the largest social coding site on the web, it provides an open and collaborative framework for development that supports the data literacy learning outcomes Stewart describes.[^3] 
 
-<a href="http://aaronbeveridge.com/data-janitor/janitor.html"><button>Next: Data Janitor</button></a>
+<a href="http://aaronbeveridge.com/data-janitor/janitor.html" class="myButton">Next Page</a>
 
 [^1]: MassMine grant details: <http://ufdc.ufl.edu/AA00025642/00001>
 [^2]: "Sketching" is term that Cox uses in her podcast with *Datastories*

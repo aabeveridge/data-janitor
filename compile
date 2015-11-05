@@ -9,7 +9,7 @@
 
 #Intro
 pandoc ./markdown/intro.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output index.html \
 --smart \
@@ -18,7 +18,7 @@ pandoc ./markdown/intro.md \
 
 #Methods
 pandoc ./markdown/methods.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output methods.html \
 --smart \
@@ -27,7 +27,7 @@ pandoc ./markdown/methods.md \
 
 #Data Janitorial Work
 pandoc ./markdown/janitor.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output janitor.html \
 --smart \
@@ -36,7 +36,7 @@ pandoc ./markdown/janitor.md \
 
 #Statistical Reasoning
 pandoc ./markdown/stats.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output stats.html \
 --smart \
@@ -45,7 +45,7 @@ pandoc ./markdown/stats.md \
 
 #Conclusion
 pandoc ./markdown/conclusion.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output conclusion.html \
 --smart \
@@ -54,7 +54,7 @@ pandoc ./markdown/conclusion.md \
 
 #Notes and References
 pandoc ./markdown/notes.md \
---css buttondown.css \
+--css style.css \
 --template ./templates/main.html \
 --output notes.html \
 --smart \

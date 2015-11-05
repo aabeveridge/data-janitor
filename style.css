@@ -16,7 +16,7 @@ body {
 }
 
 p {
-  width: 750px;
+  width: 1150px;
   font-size: 18px;
   margin-left: auto;
   margin-right: auto;
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-left: auto;
   margin-right: auto;
-  width: 750px;
+  width: 1150px;
   padding-top: 78px;
   margin-bottom: 0px;
 }
@@ -295,23 +295,35 @@ a::selection {
   display: block;
   transition: .3s background-color;
   outline: none;
+  color: #CCCCFF;
+  padding-left: 40px;
 }
 
 .nav .home a {
-  color: #FF0000;
 }
 
 
-.nav .cv a {
-  color: #fff;
+.nav . a {
 }
  
-.nav .projects a {
-  color: #fff;
+.nav .methods a {
+  color: #F8F8F8;
 }
 
-.nav .teaching a {
-  color: #fff;
+.nav .janitor a {
+  color: #F8F8F8;
+}
+
+.nav .stats a {
+  color: #F8F8F8;
+}
+
+.nav .conclusion a {
+  color: #F8F8F8;
+}
+
+.nav .notes a {
+  color: #F8F8F8;
 }
 
 .nav a:hover {
@@ -339,7 +351,6 @@ a::selection {
 @media screen and (min-width: 850px) {
 
   .nav li {
-    width: 165px;
     border-bottom: none;
     height: 50px;
     line-height: 50px;
@@ -348,16 +359,15 @@ a::selection {
   }
   
   .nav hm {
-  padding-left: 4px;
   position: absolute;
-  left: 20px;
+  left: -16px;
   z-index: 10;
+  padding-left: 0px;
   }
  
   /* Option 1 - Display Inline */
   .nav li {
     display: inline-block;
-    margin-right: -4px;
   }
  
   /* Options 2 - Float

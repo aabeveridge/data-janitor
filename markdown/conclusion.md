@@ -3,7 +3,7 @@
 > any of them. Sometimes a careful squint will sharpen the focus. But arbitrarily rejecting 
 > statistical methods makes no sense either. That is like refusing to read because writers 
 > sometimes use words to hide facts and relationships rather than to reveal them (121).
-> **Darrell Huff from "How to Lie with Statistics."**
+> **Darrell Huff,** ***How to Lie with Statistics***
 
 Certainly, for many exploratory data analyses, there are no "right" answers to the questions of which layout or color method is more appropriate---which is another reason why data visualizations are as rhetorical as they are quantitative. I provided arguments for why various methods and options made sense given the assumptions of what word clouds are intended to portray, but as with any rhetorical artifact (statistical or otherwise), these choices depend just as much on audience, delivery, and the broader rhetorical situation as they do the underlying data and project goals. In moving beyond the fact/deception binary for information rhetorics, the more difficult issue raised by the relationship of rhetoric to statistical reasoning is which choices---among an increasing variety of reasonably non-deceptive choices for data visualization---most effectively represent the underlying data? As more and more types of data visualization are made available, answers to questions like these will continue to venture further away from purely quantitative answers. 
 

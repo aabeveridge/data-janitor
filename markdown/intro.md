@@ -1,5 +1,5 @@
-<center><img src="./images/wordle3.jpg" alt="" style="padding-top:-10px;padding-bottom:0;margin-top:-10px;margin-bottom:5px"/></center>
-<p style="font-size:40px;padding-bottom:0;margin-bottom:0;padding-top:10px;margin-top:0"><b>Looking in the Dustbin</b></p>
+<center><img src="./images/wordle3.jpg" alt="" style="padding-top:-6px;padding-bottom:0;margin-top:-6px;margin-bottom:5px"/></center>
+<p style="font-size:40px;padding-bottom:0;margin-bottom:0;padding-top:6px;margin-top:0"><b>Looking in the Dustbin</b></p>
 <p style="font-size:30px;padding-top:0;margin-top:0;padding-bottom:0;margin-bottom:0">Data Janitorial Work, Statistical Reasoning, and Information Rhetorics</p>
 <p style="font-size:18px;padding-bottom:10px;margin-bottom:0;padding-top:5px;margin-top:0"><b>By Aaron Beveridge</b>[^1]</p>
 ##Introduction

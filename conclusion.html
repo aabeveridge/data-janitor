@@ -10,7 +10,31 @@
   <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-       <div class="nav">
+      <script>
+    // Create the dropdown base
+    $("<select />").appendTo("nav");
+    
+    // Create default option "Go to..."
+    $("<option />", {
+       "selected": "selected",
+       "value"   : "",
+       "text"    : "Go to..."
+    }).appendTo("nav select");
+    
+    // Populate dropdown with menu items
+    $("nav a").each(function() {
+     var el = $(this);
+     $("<option />", {
+         "value"   : el.attr("href"),
+         "text"    : el.text()
+     }).appendTo("nav select");
+    });
+    
+    $("nav select").change(function() {
+      window.location = $(this).find("option:selected").val();
+    }); 
+    </script> 
+     <div class="nav">
       <ul>
         <hm>
           <li class="home"><a href="https://aabeveridge.github.io/data-janitor/index.html"><b>Looking in the Dustbin</b></a></li></hm>
@@ -20,6 +44,16 @@
           <li class="conclusion"><a href="https://aabeveridge.github.io/data-janitor/conclusion.html">Conclusion</a></li>
           <li class="notes"><a href="https://aabeveridge.github.io/data-janitor/notes.html">References</a></li>
       </ul>
+       <select> 
+        <option value="" selected="selected">Select</option> 
+        
+        <option value="https://aabeveridge.github.io/data-janitor/index.html">Home</option> 
+        <option value="https://aabeveridge.github.io/data-janitor/methods.html">Methods</option> 
+        <option value="https://aabeveridge.github.io/data-janitor/janitor.html">Janitor</option> 
+        <option value="https://aabeveridge.github.io/data-janitor/stats.html">Statistics</option> 
+        <option value="https://aabeveridge.github.io/data-janitor/conclusion.html">Conclusion</option>
+        <option value="https://aabeveridge.github.io/data-janitor/notes.html">References</option> 
+      </select>
     </div>
       <div class="container">
     <div class="row">
@@ -37,5 +71,7 @@
     </div>
   </div>
 </body>
+            <hr>
+      <p>© 2015 <a href="http://aaronbeveridge.com">Aaron Beveridge</a></p>
       </div>
 </html>

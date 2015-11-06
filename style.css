@@ -10,7 +10,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /*  font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;*/
   margin: 0;
-  margin-top: 50px;
+  margin-top: 250px;
   padding: 0;
   background: #fefefe;
 }
@@ -79,9 +79,9 @@ hr {
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #eee;
   margin: 1em 0;
-  margin-left: 200px;
-  padding-left: 200px;
   width: 950px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 pre, code, kbd, samp {
@@ -98,16 +98,6 @@ pre, code, kbd, samp {
 
 b, strong {
   font-weight: bold;
-}
-
-.button1 button {
-  padding-left: 200px;
-  margin-left: 200px;
-  width: 100px;
- }
- 
-.button1 a {
-  width: 100px;
 }
 
 dfn {
@@ -193,6 +183,12 @@ figcaption {
   font-size: 0.8em;
   font-style: italic;
   margin: 0 0 .8em;
+}
+
+.footnotes li {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
@@ -282,6 +278,10 @@ a::selection {
   text-align: center;
 }
 
+.nav select {
+  display: none;
+}
+
 .nav ul {
   position: fixed;
   width: 100%;
@@ -296,9 +296,12 @@ a::selection {
 .nav li {
   font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
   font-size: 1.2em;
-  line-height: 40px;
+  border-bottom: none;
   height: 40px;
+  line-height: 40px;
+  font-size: 1.2em;
   border-bottom: 1px solid #888;
+  -webkit-backface-visibility: hidden;
 }
  
 .nav a {
@@ -311,10 +314,7 @@ a::selection {
 }
 
 .nav .home a {
-}
-
-
-.nav . a {
+  padding-left:0;
 }
  
 .nav .methods a {
@@ -351,15 +351,13 @@ a::selection {
   cursor: default;
 }
 
-.footer {
+footer {
   margin-top: 35px;
+  margine-bottom: 15px;
+  width: 950px;
 }
 
-.footer p {
-  color: #666666;
-}
-
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 1040px) {
 
   .nav li {
     border-bottom: none;
@@ -369,13 +367,6 @@ a::selection {
     -webkit-backface-visibility: hidden;
   }
   
-  .nav hm {
-  position: absolute;
-  left: -16px;
-  z-index: 10;
-  padding-left: 0px;
-  }
- 
   /* Option 1 - Display Inline */
   .nav li {
     display: inline-block;
@@ -394,6 +385,9 @@ a::selection {
     background-color: #444;
   }
   */
+  body {
+  margin-top: 50px;
+  }
 }
 
 .myButton {

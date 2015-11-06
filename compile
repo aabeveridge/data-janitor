@@ -14,6 +14,7 @@ pandoc ./markdown/intro.md \
 --output index.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Intro"
 
 #Methods
@@ -23,6 +24,7 @@ pandoc ./markdown/methods.md \
 --output methods.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Methods"
 
 #Data Janitorial Work
@@ -32,6 +34,7 @@ pandoc ./markdown/janitor.md \
 --output janitor.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Data Janitorial Work"
 
 #Statistical Reasoning
@@ -41,6 +44,7 @@ pandoc ./markdown/stats.md \
 --output stats.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Statistical Reasoning" 
 
 #Conclusion
@@ -50,6 +54,7 @@ pandoc ./markdown/conclusion.md \
 --output conclusion.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Conclusion" 
 
 #Notes and References
@@ -59,4 +64,5 @@ pandoc ./markdown/notes.md \
 --output notes.html \
 --smart \
 --include-before-body ./templates/nav.html \
+--include-after-body ./templates/footer.html \
 --title-prefix="Notes & References" 

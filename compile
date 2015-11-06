@@ -15,7 +15,7 @@ pandoc ./markdown/intro.md \
 --smart \
 --include-before-body ./templates/nav.html \
 --include-after-body ./templates/footer.html \
---title-prefix="Intro"
+--title-prefix="Introduction"
 
 #Methods
 pandoc ./markdown/methods.md \
@@ -25,7 +25,7 @@ pandoc ./markdown/methods.md \
 --smart \
 --include-before-body ./templates/nav.html \
 --include-after-body ./templates/footer.html \
---title-prefix="Methods"
+--title-prefix="Methodology"
 
 #Data Janitorial Work
 pandoc ./markdown/janitor.md \
@@ -65,4 +65,4 @@ pandoc ./markdown/notes.md \
 --smart \
 --include-before-body ./templates/nav.html \
 --include-after-body ./templates/footer.html \
---title-prefix="Notes & References" 
+--title-prefix="References"

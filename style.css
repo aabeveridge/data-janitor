@@ -22,10 +22,6 @@ p {
   margin-right: auto;
 }  
 
-img {
-  max-width: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #111;
   line-height: 125%;
@@ -137,6 +133,12 @@ ul, ol {
   padding: 0 0 0 2em;
 }
 
+ul {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 li p:last-child {
   margin-bottom: 0;
 }
@@ -166,23 +168,34 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: bottom;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 figure {
   display: block;
   text-align: center;
   margin: 1em 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-figure img {
+.figure img {
   border: none;
+  display: block;
   margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 figcaption {
   font-size: 0.8em;
   font-style: italic;
-  margin: 0 0 .8em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footnotes li {
@@ -302,7 +315,7 @@ a::selection {
   font-size: 1.2em;
   border-bottom: 1px solid #888;
   -webkit-backface-visibility: hidden;
-}
+  }
  
 .nav a {
   text-decoration: none;
@@ -365,28 +378,11 @@ footer {
     line-height: 50px;
     font-size: 1.2em;
     -webkit-backface-visibility: hidden;
-  }
-  
-  /* Option 1 - Display Inline */
-  .nav li {
     display: inline-block;
   }
- 
-  /* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
+  
   body {
-  margin-top: 50px;
+  margin-top: 60px;
   }
 }
 
